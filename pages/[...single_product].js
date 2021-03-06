@@ -1035,8 +1035,8 @@ export async function getServerSideProps({ params, req, locale, res }) {
                         photos: product.photos,
                         reviewed: product.reviewed,
                         sold_out: product.sold_out,
-                        createdAt: product.createdAt.toString(),
-                        updatedAt: product.updatedAt.toString(),
+                        createdAt: product.createdAt?.toString(),
+                        updatedAt: product.updatedAt?.toString(),
                         saved_by_viewer: saved_by_viewer,
                         saves: saves,
                         views: views,
@@ -1050,7 +1050,7 @@ export async function getServerSideProps({ params, req, locale, res }) {
                         username: seller.username,
                         image: seller.image,
                         telephone: seller.telephone,
-                        createdAt: seller.createdAt.toString()
+                        createdAt: seller.createdAt?.toString()
                     },
                     userReview: userReview,
                     viewer: viewer,
